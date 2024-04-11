@@ -30,6 +30,12 @@ class Program
             Console.Write("Por favor, ingrese cuántos números desea operar: ");
             int cantidadNumeros = int.Parse(Console.ReadLine());
 
+            if (cantidadNumeros != 2)
+            {
+                Console.WriteLine("Esta calculadora solo admite dos operandos. Por favor, intente nuevamente.");
+                continue;
+            }
+
             double[] operandos = new double[cantidadNumeros];
             for (int i = 0; i < cantidadNumeros; i++)
             {
@@ -67,7 +73,7 @@ class Program
 
             try
             {
-                double resultado = operacion.RealizarOperacion(operandos);
+                double resultado = operacion.RealizarOperacion(operandos[0], operandos[1]);
                 Console.WriteLine();
                 Console.WriteLine("╔════════════════════════════════════════╗");
                 Console.WriteLine("║         Resultados del programa          ║");

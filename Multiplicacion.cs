@@ -1,13 +1,8 @@
 ﻿// Clase para la operación de multiplicación
 public class Multiplicacion : Operacion
 {
-    public override double RealizarOperacion(double[] operandos)
+    public override double RealizarOperacion(double operando1, double operando2)
     {
-        double resultado = 1;
-        foreach (double operando in operandos)
-        {
-            resultado *= operando;
-        }
-        return resultado;
+        return operando1 * operando2;
     }
 }
